@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 Ro'yhatdan O'tish
+    form(method="POST", action="/register")
+        .form-group
+            label Ism:
+            input.form-control(name='name', type='text')
+        .form-group
+            label Email:
+            input.form-control(name='email', type='text')
+        .form-group
+            label Foydalanuvchi ismi:
+            input.form-control(name='username' type='text')
+        .form-group
+            label Parol:
+            input.form-control(name='password', type='password')
+        .form-group
+            label Qaytadan Parol Kiriting:
+            input.form-control(name='password2', type='password')
+        br
+        input.btn.btn-success(type='submit', value='Ro\'yhatdanO\'t')

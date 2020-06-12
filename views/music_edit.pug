@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method="POST", action="/music/edit/" + music._id)
+        .form-group
+            label Ism:
+            input.form-control(name='name', type='text', value=music.name)
+        .form-group
+            label Bastakor:
+            input.form-control(name='singer', type='text', value=music.singer)
+        .form-group
+            label Izoh:
+            textarea.form-control(name='comment')=music.comment
+        br
+        input.btn.btn-danger(type='submit', value='O\'zgartirish')

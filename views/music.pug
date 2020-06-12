@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div.m-5
+        h1= music.name
+        br
+        h5 Bastakor #{music.singer}
+        hr
+        p= music.comment
+        br
+        a.btn.btn-primary.mr-2(href="/music/edit/" + music._id) O'zgartirish
+        a.btn.btn-danger.music-delete(href="#" data-id=music._id) O'chirish
